@@ -52,7 +52,8 @@ def movies_with_director_key(name, movies_collection)
   movies = movies_collection
     movie_index = 0
     while movie_index < movies_collection.length do
-      movie_and_name << movies[movie_index][:director_name] = name
+      updated_hash = movies[movie_index][:director_name] = name
+      movie_and_name << updated_hash
       movie_index += 1
     end
   movie_and_name
